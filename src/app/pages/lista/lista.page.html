@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center" color="danger">Guias</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="mM()" color="danger">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/inicio" text="back" color="danger">
+
+      </ion-back-button>
+
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar animated showCancelButton="always" color="danger" (ionChange)="buscar( $event )"></ion-searchbar>
+
+  <ion-list>
+    <ion-item color="dark" *ngFor="let c of componentes | filtro:textoBuscar" [routerLink]="c.redirecTo" detail=true>
+      <ion-icon [name]="c.icon" slot="start" color="danger"> </ion-icon>
+      {{ c.name }}
+    </ion-item>
+  </ion-list>
+</ion-content>

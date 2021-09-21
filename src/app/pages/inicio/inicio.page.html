@@ -1,0 +1,63 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/" text="back" color="danger">
+      </ion-back-button>
+
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-button (click)="mM()" color="danger">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="dark">
+  <ion-header collapse="condense" >
+    <ion-toolbar>
+      <ion-title size="xl">GUIAS ABMODEL</ion-title>
+    </ion-toolbar>
+  </ion-header>
+ <br>
+
+ <ion-card>
+  <ion-card-header>
+    <ion-img src="/assets/logo.png"></ion-img>
+    <ion-card-subtitle class="ion-text-center"></ion-card-subtitle>
+    <ion-card-title  color="danger" class="ion-text-center">GUIAS ABMODEL</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content >
+    Tu Plataforma favorita para encontrar guias y soluciones a tus problemas del dia a dia en los videojuegos, haga clic en el boton de aca abajo para ir a las guias
+  </ion-card-content>
+  <ion-button  href="/lista"  expand="block" color="danger" RouterLink="/lista" >  
+    Lista de Guias
+ </ion-button>
+ </ion-card>
+
+
+ <ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-img src="/assets/abmodelc.jpg"></ion-img>
+      <ion-card-subtitle class="ion-text-center"></ion-card-subtitle>
+      <br>
+      <br>
+      <ion-card-title color="danger" class="ion-text-center">¿No Tienes Cuenta? </ion-card-title>
+    </ion-card-header>
+    
+    <ion-card-content>
+      Registrate Presionante el Boton de aca abajo!! 
+    </ion-card-content>
+    <ion-button  href="/registro"  expand="block" color="danger" RouterLink="/registro" >  
+      Registrarse
+   </ion-button>
+   </ion-card>
+    
+ </ion-card>
+
+ 
+</ion-content>

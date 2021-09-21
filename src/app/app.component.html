@@ -1,0 +1,29 @@
+<ion-app>
+
+  <ion-menu side="start" menuId="menu" contentId="main">
+
+    <ion-header>
+      <ion-toolbar color="danger">
+        <ion-title class="ion-text-center" >ABMODEL MENU</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+
+    <ion-content>
+
+      <br>
+
+      <img src="assets/logo.png">
+      <ion-button Href="/inicio" expand="block" color="danger" routerLink="/inicio"> Inicio </ion-button>
+      <ion-button Href="/lista" expand="block" color="danger" routerLink="/lista"> Lista de Guias </ion-button>
+      <ion-button Href="/registro" expand="block" color="danger" routerLink="/registro"> Registrarse </ion-button>
+      <ion-button Href="/cuenta" expand="block" color="danger" routerLink="/cuenta"> Detalles de la cuenta </ion-button>
+      <ion-button Href="/" expand="block" color="medium" routerLink="/"> Salir </ion-button>
+
+      
+    </ion-content>
+  
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

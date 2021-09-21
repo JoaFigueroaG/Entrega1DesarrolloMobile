@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    
+    <ion-title color="danger">Inicio de Sesion</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <img src="assets/logo.png">
+ 
+
+  <form #formulario="ngForm" (ngSubmit) ="onSubmit()">
+
+    <ion-list-header>
+      
+    </ion-list-header>
+
+      <ion-item>
+        <ion-label position="floating" color="danger">Usuario</ion-label>
+        <ion-input clearInput required type="text" placeholder="Ingrese sus datos" name="user" color="danger"
+        [(ngModel)]= "usuario.user"></ion-input>
+      </ion-item>
+      
+      
+      
+      <ion-item>
+        <ion-label position="floating" color="danger">Contraseña</ion-label>
+        <ion-input clearInput required type="password" placeholder="Ingrese sus datos" name="pass" color="danger"
+        [(ngModel)]= "usuario.pass"></ion-input>
+      </ion-item>
+      
+      
+
+       
+      <ion-button [disabled]="formulario.invalid"
+        expand="block" fill="clear" expand="block" shape="round" color="danger" routerLink="/inicio" type="submit">
+        Iniciar Sesion
+      </ion-button>
+
+      <ion-button Href="/inicio" expand="block" color="danger" routerLink="/inicio"> Entrar como invitado </ion-button>
+
+
+  </form>
+</ion-content>

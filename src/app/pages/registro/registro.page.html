@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registrarse</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/inicio" text="back" color="danger" >
+
+      </ion-back-button>
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #formulario="ngForm" (ngSubmit) ="onSubmit()">
+
+    <!--<ion-list-header>
+      <ion-label>Validacion del registro [{{formulario.valid}}]</ion-label>
+    </ion-list-header>-->
+<br>
+      <ion-item>
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input clearInput required type="text" placeholder="Ingrese sus datos" name="user"
+        [(ngModel)]= "usuario.user"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="floating">Correo Electronico</ion-label>
+        <ion-input clearInput required type="email" placeholder="Ingrese sus datos" name="email"
+        [(ngModel)]= "usuario.email"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input clearInput required type="password" placeholder="Ingrese sus datos" name="pass"
+        [(ngModel)]= "usuario.pass"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="floating">Año de Nacimiento</ion-label>
+        <ion-input clearInput required type="date" placeholder="Ingrese sus datos" name="nacimiento"
+        [(ngModel)]= "usuario.nacimiento"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="floating">Telefono</ion-label>
+        <ion-input clearInput required maxlength="8" minlength="12" type="number" placeholder="Ingrese sus datos" name="telefono"
+        [(ngModel)]= "usuario.telefono"></ion-input>
+      </ion-item>
+
+      <br>  
+      <ion-button [disabled]="formulario.invalid"
+        expand="block" fill="clear" shape="round" color="danger" routerLink="/inicio" type="submit">
+        Entrar
+      </ion-button>
+  </form>
+</ion-content>
